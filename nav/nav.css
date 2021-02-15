@@ -1,0 +1,19 @@
+nav {
+  padding: 2vw;
+  background-color: rgba(0, 0, 0, 0.678);
+}
+nav a {
+  padding: 5px;
+  text-decoration: none;
+  color: aliceblue;
+  margin-right: 10px;
+}
+nav button {
+  background-color: blue;
+  padding: 5px;
+  color: aliceblue;
+  font-weight: bold;
+}
+nav input {
+  padding: 5px;
+}
