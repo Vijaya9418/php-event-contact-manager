@@ -17,3 +17,6 @@ nav button {
 nav input {
   padding: 5px;
 }
+.loginbtn {
+  float: right;
+}
