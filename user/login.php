@@ -1,5 +1,5 @@
 <?php
-include('../nav/nav.php')
+include('sqllogin.php')
 ?>
 
 <!DOCTYPE html>
@@ -24,33 +24,34 @@ include('../nav/nav.php')
 <body>
     <br><br><br> <br><br><br>
 
-    <form action="" method="post">
-        <div class="row  justify-content-center">
-            <div class="col-md-6">
 
-                <div class="card bg-primary text-white">
+    <div class="row  justify-content-center">
+        <div class="col-md-6">
 
-                    <div class="card-body">
-                        <h4 class="card-title">Signin</h4>
-                        <form action="">
-                            <div class="form-group">
-                                <label for="username">Username</label>
-                                <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="username">
-                                <small id="helpId" class="form-text text-white"></small>
-                            </div>
-                            <div class="form-group">
-                                <label for="pwd">Password</label>
-                                <input type="password" class="form-control" name="pwd" id="" placeholder="password">
-                            </div>
-                            <button type="submit" class="btn btn-secondary">Submit</button>
-                        </form>
-                    </div>
+            <div class="card bg-primary text-white">
+
+                <div class="card-body">
+                    <h4 class="card-title">Signin</h4>
+                    <form method="post" action="login.php">
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input required type="text" value="<?php echo $username ?>" class="form-control" name="username" id="username" aria-describedby="helpId" placeholder="username">
+                            <small style="color:red;" id="helpId" class="form-text text-warning"><?php echo $error['username'] ?></small>
+                        </div>
+                        <div class="form-group">
+                            <label for="pwd">Password</label>
+                            <input required type="password" value="<?php echo $pwd ?>" class="form-control" name="pwd" id="pwd" placeholder="password">
+                            <small style="color:red;" id="helpId" class="form-text text-warning"><?php echo $error['pwd'] ?></small>
+                        </div>
+                        <button type="submit" name="login" class="btn btn-secondary">Login</button>
+                    </form>
                 </div>
-                <a href="/event_manager/user/reg.php" class="badge m-3   p-3  badge-warning reglink">Register</a>
             </div>
+            <a href="/event_manager/user/reg.php" class="badge m-3   p-3  badge-warning reglink">Register</a>
         </div>
+    </div>
 
-    </form>
+
 
 </body>
 

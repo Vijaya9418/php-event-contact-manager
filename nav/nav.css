@@ -17,6 +17,21 @@ nav button {
 nav input {
   padding: 5px;
 }
+.namedis {
+  display: inline-block;
+  margin-left: 10px;
+  color: aliceblue;
+  float: right;
+  padding: 5px;
+  margin-right: 20px;
+}
+
 .loginbtn {
+  float: right;
+}
+.formvi {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0px;
   float: right;
 }

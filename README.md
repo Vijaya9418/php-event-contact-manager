@@ -1,1 +1,0 @@
-# php-event-contact-manager
