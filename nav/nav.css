@@ -1,13 +1,53 @@
 nav {
-  padding: 2vw;
-  background-color: rgba(0, 0, 0, 0.678);
+  padding: 0.9vw;
+  
+  background-color: #0d7967;
+  background-image: linear-gradient(315deg, #292929 0%, #0f0f0f 74%);
+  border: 2px solid #024439;
+  border-radius:  25px 0px 25px 0px ;
+
 }
 nav a {
-  padding: 5px;
+
+  padding: 9px 12px;
+  cursor: pointer;
+ /* border: 1px solid #cc3366; */
+ border-radius:  12px 0px 12px 0px ;
+ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  transition: 0.9s;
+  background: none;
   text-decoration: none;
   color: aliceblue;
+  font-weight: bold;
   margin-right: 10px;
+  position: relative;
+  overflow: hidden;
+  transition: height 0.9s, border-radius 0.8s 0.3s;
+  z-index: 1;
+
 }
+
+nav a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+
+  height: 0%;
+  background-color: #2a2a72;
+  background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
+  z-index: -1;
+  transition: 0.9s;
+  top: 0;
+  transition: height 0.8s, border-radius 0.8s 0.3s;
+  border-radius: 0 0 50% 50%;
+}
+
+nav a:hover::before {
+  height: 100%;
+  border-radius: 0px;
+}
+
 nav button {
   background-color: blue;
   padding: 5px;
@@ -20,8 +60,10 @@ nav input {
 .namedis {
   display: inline-block;
   margin-left: 10px;
-  color: aliceblue;
+  color: #024439;
   float: right;
+  font-weight: bold;
+  
   padding: 5px;
   margin-right: 20px;
 }
@@ -35,3 +77,61 @@ nav input {
   margin: 0px;
   float: right;
 }
+
+nav .btn2{
+  background: #ff6699;
+  border-radius:  9px 0px 9px 0px ;
+ border-color: #cc3366;
+ border-style: outset;
+ border-width: 3px;
+ color: #090909;
+
+}
+
+nav .btn{
+  background: #edbcee;
+  border-radius:  9px 0px 9px 0px ;
+ border-color: #cc3366;
+ border-style: outset;
+ border-width: 3px;
+margin-left: 120px;
+ justify-content: center;
+ align-items: center;
+ color: #090909;
+}
+
+nav .btn2:hover{
+  background: #7a0029;
+  border-radius:  9px 0px 9px 0px ;
+ border-color: #cc3366;
+ border-style: outset;
+ border-width: 3px;
+ color: #f8f0f0;
+
+}
+.loginbtn{
+  background-color: #0d7967;
+  background-image: linear-gradient(315deg, #61d4c1 0%, #0d7967 74%);
+  border: 1px solid #024439;
+  border-radius:  25px 0px 25px 0px ;
+  outline-offset: #090909 2px;
+  padding: 10px 30px;
+  align-items: center;
+  color: #090909;
+  box-shadow: #f8f0f0;
+  font-weight: bold;
+}
+
+.loginbtn:hover{
+  background-color: #0d7967;
+  background-image: linear-gradient(315deg, #0d7967 0%,  #61d4c1 74%);
+  border: 1px solid #024439;
+  border-radius:  25px 0px 25px 0px ;
+  outline-offset: #090909 2px;
+  padding: 10px 30px;
+  align-items: center;
+  color: #090909;
+  box-shadow: #f8f0f0;
+  font-weight: bold;
+}
+
