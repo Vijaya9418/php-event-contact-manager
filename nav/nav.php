@@ -15,12 +15,12 @@
 
 <body>
     <nav>
-        <a href="/event_manager/">Home</a>
-        <a href="/event_manager/lay/events.php">Events</a>
-        <a href="/event_manager/lay/groups.php">Groups</a>
-        <a href="/event_manager/lay/explore.php">Explore</a>
-        <input type="text" placeholder="search">
-        <button>Search</button>
+        <a href="/event_manager/">HOME</a>
+        <a href="/event_manager/lay/events.php">EVENTS</a>
+        <a href="/event_manager/lay/groups.php">GROUPS</a>
+        <a href="/event_manager/lay/explore.php">EXPLORE</a>
+        <input class="btn" type="text" placeholder="search">
+        <button class="btn2" >Search</button>
         <?php
         $name = "name";
 
