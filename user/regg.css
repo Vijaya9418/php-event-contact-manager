@@ -28,10 +28,11 @@
   .carddd
   {
       width: 800px;
-      border: 3px solid  #cc3366;
+      border: 5px solid #7a0029;
       justify-content: center;
       background: rosybrown;
       border-radius: 25px 0px 25px 0px;
+      box-shadow: rgba(88, 135, 173, 0.863) 0px 54px 55px, rgba(88, 135, 173, 0.863) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   }
 .btn4
 {
@@ -42,7 +43,7 @@
     border-style: outset;
     padding: 5px 15px;
     font-weight: bold;
-    border-width: 3px;
+    border-width: 5px;
     color: #090909;
     
 }
@@ -52,7 +53,7 @@
     border-radius: 9px 0px 9px 0px;
     border-color: #cc3366;
     border-style: outset;
-    border-width: 3px;
+    border-width: 5px;
     color: #f8f0f0;
   }
 
