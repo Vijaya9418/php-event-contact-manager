@@ -93,13 +93,13 @@ nav .btn2 {
   color: #090909;
 }
 
-nav .btn {
+nav .btn1 {
   background: #edbcee;
   border-radius: 9px 0px 9px 0px;
   border-color: #cc3366;
   border-style: outset;
   border-width: 3px;
-  margin-left: 5vw;
+  margin-left: 15vw;
   justify-content: center;
   align-items: center;
   color: #090909;
@@ -114,14 +114,15 @@ nav .btn2:hover {
   color: #f8f0f0;
 }
 .loginbtn {
-  background-color: #0d7967;
-  background-image: linear-gradient(315deg, #61d4c1 0%, #0d7967 74%);
-  border: 1px solid #024439;
-  border-radius: 25px 0px 25px 0px;
+  background: none; 
+  
+  border: 1px solid aliceblue;
+ 
   outline-offset: #090909 2px;
-  padding: 10px 30px;
+  padding: 8px 20px;
   align-items: center;
-  color: #090909;
+  font-family: "montserrat";
+color: aliceblue;
   box-shadow: #f8f0f0;
   font-weight: bold;
 }
@@ -130,9 +131,9 @@ nav .btn2:hover {
   background-color: #0d7967;
   background-image: linear-gradient(315deg, #0d7967 0%, #61d4c1 74%);
   border: 1px solid #024439;
-  border-radius: 25px 0px 25px 0px;
+  font-family: "montserrat";
   outline-offset: #090909 2px;
-  padding: 10px 30px;
+  padding: 8px 20px;
   align-items: center;
   color: #090909;
   box-shadow: #f8f0f0;
