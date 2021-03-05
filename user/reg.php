@@ -100,7 +100,6 @@ include('sqlreg.php')
                         </form>
                     </div>
                 </div>
-                <a href="/event_manager/user/login.php" class="badge m-3   p-3  badge-success reglink">Login</a>
             </div>
         </div>
 
