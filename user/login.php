@@ -23,15 +23,15 @@ include('sqllogin.php')
 
 <body>
     <br><br><br> <br><br><br>
-
+    <div class="bgimage"></div>
 
     <div class="row  justify-content-center">
-        <div class="col-md-6">
+        <div class='col-lg-6 align-self-center'>
 
-            <div class="card bg-primary text-white">
+            <div class="cardd text-white p-5">
 
                 <div class="card-body">
-                    <h4 class="card-title">Signin</h4>
+                    <h4 class="form-text text-center">Signin</h4>
                     <form method="post" action="login.php">
                         <div class="form-group">
                             <label for="username">Username</label>

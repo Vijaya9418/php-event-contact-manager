@@ -1,20 +1,27 @@
 nav {
-  padding: 1vw;
-  border-radius: 12px;
-  background-color: #090909;
+  padding: 0.9vw;
+  height: 65px;
+  background-color: #0d7967;
+  background-image: linear-gradient(315deg, #292929 0%, #0f0f0f 74%);
+  border: 2px solid #024439;
+  border-radius: 25px 0px 25px 0px;
 }
 nav a {
-  border: 1px solid #3498db;
-  padding: 10px 20px;
+  padding: 9px 12px;
   cursor: pointer;
-  transition: 0.8s;
+  /* border: 1px solid #cc3366; */
+  border-radius: 12px 0px 12px 0px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  transition: 0.9s;
   background: none;
   text-decoration: none;
   color: aliceblue;
   font-weight: bold;
-  margin: 10px;
+
+  margin-right: 10px;
   position: relative;
   overflow: hidden;
+  transition: height 0.9s, border-radius 0.8s 0.3s;
   z-index: 1;
 }
 
@@ -25,19 +32,28 @@ nav a::before {
   width: 100%;
 
   height: 0%;
-  background: #3498db;
+
+  background-color: #2a2a72;
+  background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
   z-index: -1;
-  transition: 0.8s;
+  transition: 0.9s;
   top: 0;
-  border-radius: 0 0 50% 50%;
   transition: height 0.8s, border-radius 0.8s 0.3s;
+  border-radius: 0 0 50% 50%;
 }
 
 nav a:hover::before {
   height: 100%;
   border-radius: 0px;
 }
-
+nav a:hover {
+  display: inline-block;
+  font-size: large;
+  text-decoration: none;
+  vertical-align: top;
+  color: whitesmoke;
+  margin-right: 3px;
+}
 nav button {
   background-color: blue;
   padding: 5px;
@@ -50,8 +66,10 @@ nav input {
 .namedis {
   display: inline-block;
   margin-left: 10px;
-  color: aliceblue;
+  color: #024439;
   float: right;
+  font-weight: bold;
+
   padding: 5px;
   margin-right: 20px;
 }
@@ -64,4 +82,59 @@ nav input {
   vertical-align: top;
   margin: 0px;
   float: right;
+}
+
+nav .btn2 {
+  background: #ff6699;
+  border-radius: 9px 0px 9px 0px;
+  border-color: #cc3366;
+  border-style: outset;
+  border-width: 3px;
+  color: #090909;
+}
+
+nav .btn {
+  background: #edbcee;
+  border-radius: 9px 0px 9px 0px;
+  border-color: #cc3366;
+  border-style: outset;
+  border-width: 3px;
+  margin-left: 5vw;
+  justify-content: center;
+  align-items: center;
+  color: #090909;
+}
+
+nav .btn2:hover {
+  background: #7a0029;
+  border-radius: 9px 0px 9px 0px;
+  border-color: #cc3366;
+  border-style: outset;
+  border-width: 3px;
+  color: #f8f0f0;
+}
+.loginbtn {
+  background-color: #0d7967;
+  background-image: linear-gradient(315deg, #61d4c1 0%, #0d7967 74%);
+  border: 1px solid #024439;
+  border-radius: 25px 0px 25px 0px;
+  outline-offset: #090909 2px;
+  padding: 10px 30px;
+  align-items: center;
+  color: #090909;
+  box-shadow: #f8f0f0;
+  font-weight: bold;
+}
+
+.loginbtn:hover {
+  background-color: #0d7967;
+  background-image: linear-gradient(315deg, #0d7967 0%, #61d4c1 74%);
+  border: 1px solid #024439;
+  border-radius: 25px 0px 25px 0px;
+  outline-offset: #090909 2px;
+  padding: 10px 30px;
+  align-items: center;
+  color: #090909;
+  box-shadow: #f8f0f0;
+  font-weight: bold;
 }
