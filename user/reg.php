@@ -28,7 +28,7 @@ include('sqlreg.php')
 <body>
     <br><br><br> <br><br><br>
 
-    <form action="" method="post">
+    <form action="" method="post" id="regform">
         <div class="row  justify-content-center">
             <div class="col-md-9">
 
@@ -106,8 +106,18 @@ include('sqlreg.php')
 
     </form>
 
+    <div class="regsuccess" id="regsuc">
+        <span class="headreg">Registered Successful</span>
+        <span class="loginsu"><a href="/event_manager/user/login.php">Login</a></span>
+    </div>
 </body>
 
 </html>
 <!--
 -->
+<?php
+if (isset($regsuccess)) {
+    echo "<script>document.getElementById('regsuc').style.visibility='visible';
+    document.getElementById('regform').style.filter='blur(30px)';</script>";
+}
+?>

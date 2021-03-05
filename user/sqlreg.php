@@ -96,7 +96,8 @@ if (isset($_POST['register'])) {
             // initialize();
             register();
             echo "Successful!";
-            echo '<script>alert("Registered successfully")</script>';
+
+            $regsuccess = true;
         } else {
             $errors['username'] = "choose different username! , this one taken";
             echo $errors['username'];
