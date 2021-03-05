@@ -1,0 +1,59 @@
+.bgimage2 {
+    background-image: url("../images/signn.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    filter: blur(5px);
+    -webkit-filter: blur(2px);
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+ 
+    left: 0px;
+  }
+  .form-group
+  {
+      width: 290px;
+      
+     
+  }
+
+  .form-control
+  {
+    border: 1px solid  #cc3366;
+  }
+
+  .carddd
+  {
+      width: 800px;
+      border: 3px solid  #cc3366;
+      justify-content: center;
+      background: rosybrown;
+      border-radius: 25px 0px 25px 0px;
+  }
+.btn4
+{
+    float: right;
+    background: #ff6699;
+    border-radius: 9px 0px 9px 0px;
+    border-color: #cc3366;
+    border-style: outset;
+    padding: 5px 15px;
+    font-weight: bold;
+    border-width: 3px;
+    color: #090909;
+    
+}
+
+.btn4:hover {
+    background: #7a0029;
+    border-radius: 9px 0px 9px 0px;
+    border-color: #cc3366;
+    border-style: outset;
+    border-width: 3px;
+    color: #f8f0f0;
+  }
+
+ 
