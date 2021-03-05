@@ -26,9 +26,9 @@ include('sqllogin.php')
     <div class="bgimage"></div>
 
     <div class="row  justify-content-center">
-   
+
         <div class='col-lg-6 align-self-center'>
-      
+
             <div class="cardd text-white p-5">
 
                 <div class="card-body">
@@ -44,15 +44,20 @@ include('sqllogin.php')
                             <input required type="password" value="<?php echo $pwd ?>" class="form-control" name="pwd" id="pwd" placeholder="password">
                             <small style="color:red;" id="helpId" class="form-text text-warning"><?php echo $error['pwd'] ?></small>
                         </div>
-                        <button type="submit" name="login" class="btn3">Login</button>
-                        <p class="ok">Don't have an account? </p>
-                        <a href="/event_manager/user/reg.php" class="reglink">Register</a>
+                        <span class="re">
+                            <span class="reb">
+                                <button type="submit" name="login" class="btn3">Login</button>
+                            </span>
+                            <p class="ok">Don't have an account? </p>
+                            <a href="/event_manager/user/reg.php" class="reglink">Register</a>
+                        </span>
+
                     </form>
                 </div>
             </div>
-           
+
         </div>
-        </div>
+    </div>
     </div>
     </div>
 

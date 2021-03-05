@@ -12,26 +12,25 @@
   top: 0px;
   left: 0px;
 }
-.ok
-{
-  float: right;
-  margin-top: 55px;
-  margin-right: 0px; 
+.ok {
+  margin-right: 0px;
+
+  display: inline-block;
 }
 
 .reglink {
-  float: right;
-  margin-top: 55px;
   margin-right: 0px;
-
 }
-
+.re {
+  display: block;
+  float: right;
+}
 .cardd {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-  url("../images/bgg.jpg");
+    url("../images/bgg.jpg");
   background-repeat: no-repeat;
-  height:380px;
-  
+  height: 380px;
+
   box-shadow: blue 0px 0px 0px 2px inset, rgba(240, 46, 170, 0.4) -5px 5px,
     rgba(240, 46, 170, 0.3) -15px 15px, rgba(240, 46, 170, 0.2) -25px 25px,
     rgba(240, 46, 170, 0.1) -35px 35px, rgba(240, 46, 170, 0.05) -45px 45px,
@@ -40,26 +39,28 @@
     rgba(240, 46, 170, 0.1) 35px -35px, rgba(240, 46, 170, 0.05) 45px -45px,
     rgba(240, 83, 182, 0.3) 95px -95px;
 }
-.btn3
-{
+.reb {
+  display: block;
+}
+.btn3 {
   float: right;
- background: none; 
- border: 1px solid #fffefe;
- padding: 5px 18px;
- font-size: 20px;
- font-family: "montserrat";
- margin: 5px;
- color: aliceblue;
+  background: none;
+  border: 1px solid #fffefe;
+  padding: 5px 18px;
+  font-size: 20px;
+  font-family: "montserrat";
+  margin: 5px;
+  display: block;
+  color: aliceblue;
 }
 
-.btn3:hover
-{
+.btn3:hover {
   float: right;
- background: rgb(48, 48, 48); 
- border: 1px solid #fffefe;
- padding: 5px 18px;
- font-size: 20px;
- font-family: "montserrat";
- margin: 5px;
- color: aliceblue;
+  background: rgb(48, 48, 48);
+  border: 1px solid #fffefe;
+  padding: 5px 18px;
+  font-size: 20px;
+  font-family: "montserrat";
+  margin: 5px;
+  color: aliceblue;
 }
