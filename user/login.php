@@ -23,7 +23,7 @@ include('sqllogin.php')
 
 <body>
     <br><br><br> <br><br><br>
-
+    <div class="bgimage"></div>
 
     <div class="row  justify-content-center">
         <div class='col-lg-6 align-self-center'>
