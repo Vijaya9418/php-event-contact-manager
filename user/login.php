@@ -24,10 +24,11 @@ include('sqllogin.php')
 <body>
     <br><br><br> <br><br><br>
 
-
+    <div class="bgimage">
     <div class="row  justify-content-center">
+   
         <div class='col-lg-6 align-self-center'>
-
+      
             <div class="cardd text-white p-5">
 
                 <div class="card-body">
@@ -49,8 +50,9 @@ include('sqllogin.php')
             </div>
             <a href="/event_manager/user/reg.php" class="badge m-3   p-3  badge-warning reglink">Register</a>
         </div>
+        </div>
     </div>
-
+    </div>
 
 
 </body>
