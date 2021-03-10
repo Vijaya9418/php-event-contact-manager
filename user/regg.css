@@ -1,60 +1,83 @@
 .bgimage2 {
-    background-image: url("../images/signn.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    filter: blur(5px);
-    -webkit-filter: blur(2px);
-    z-index: -2;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0px;
- 
-    left: 0px;
-  }
-  .form-group
-  {
-      width: 290px;
-      
-     
-  }
+  background-image: url("../images/signn.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  filter: blur(5px);
+  -webkit-filter: blur(2px);
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
 
-  .form-control
-  {
-    border: 1px solid  #cc3366;
-  }
+  left: 0px;
+}
+.form-group {
+  width: 290px;
+}
 
-  .carddd
-  {
-      width: 800px;
-      border: 5px solid #7a0029;
-      justify-content: center;
-      background: rosybrown;
-      border-radius: 25px 0px 25px 0px;
-      box-shadow: rgba(88, 135, 173, 0.863) 0px 54px 55px, rgba(88, 135, 173, 0.863) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-  }
-.btn4
-{
-    float: right;
-    background: #ff6699;
-    border-radius: 9px 0px 9px 0px;
-    border-color: #cc3366;
-    border-style: outset;
-    padding: 5px 15px;
-    font-weight: bold;
-    border-width: 5px;
-    color: #090909;
-    
+.form-control {
+  border: 1px solid #cc3366;
+}
+
+.carddd {
+  width: 800px;
+  border: 5px solid #7a0029;
+  justify-content: center;
+  background: rosybrown;
+  border-radius: 25px 0px 25px 0px;
+  box-shadow: rgba(88, 135, 173, 0.863) 0px 54px 55px,
+    rgba(88, 135, 173, 0.863) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.btn4 {
+  float: right;
+  background: #ff6699;
+  border-radius: 9px 0px 9px 0px;
+  border-color: #cc3366;
+  border-style: outset;
+  padding: 5px 15px;
+  font-weight: bold;
+  border-width: 5px;
+  color: #090909;
 }
 
 .btn4:hover {
-    background: #7a0029;
-    border-radius: 9px 0px 9px 0px;
-    border-color: #cc3366;
-    border-style: outset;
-    border-width: 5px;
-    color: #f8f0f0;
-  }
+  background: #7a0029;
+  border-radius: 9px 0px 9px 0px;
+  border-color: #cc3366;
+  border-style: outset;
+  border-width: 5px;
+  color: #f8f0f0;
+}
 
- 
+.regsuccess {
+  visibility: hidden;
+  padding: 30px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  text-align: center;
+  background-color: antiquewhite;
+}
+.headreg {
+  font-size: x-large;
+  display: block;
+  padding: 2vw;
+}
+.loginsu a {
+  font-size: large;
+  background-color: blueviolet;
+  color: #fffefe;
+  text-decoration: none;
+  padding: 15px;
+  border-radius: 12px;
+}
+.form {
+  transform: translate(-50%, -50%);
+  position: absolute;
+  left: 40%;
+  top: 50%;
+}

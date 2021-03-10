@@ -30,7 +30,7 @@ include('sqlreg.php')
     <br><br><br> <br><br><br>
 
     <div class="bgimage2"></div>
-    <form action="" method="post" id="regform">
+    <form class="form" action="" method="post" id="regform">
         <div class="row  justify-content-center">
             <div class="col-md-9">
 

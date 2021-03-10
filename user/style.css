@@ -65,27 +65,3 @@
   margin: 5px;
   color: aliceblue;
 }
-
-.regsuccess {
-  visibility: hidden;
-  padding: 30px;
-  transform: translate(-50%, -50%);
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  text-align: center;
-  background-color: antiquewhite;
-}
-.headreg {
-  font-size: x-large;
-  display: block;
-  padding: 2vw;
-}
-.loginsu a {
-  font-size: large;
-  background-color: blueviolet;
-  color: #fffefe;
-  text-decoration: none;
-  padding: 15px;
-  border-radius: 12px;
-}
