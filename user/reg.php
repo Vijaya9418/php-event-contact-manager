@@ -8,7 +8,7 @@ include('sqlreg.php')
 <html lang="en">
 
 <head>
-   
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -28,8 +28,9 @@ include('sqlreg.php')
 
 <body>
     <br><br><br> <br><br><br>
+
     <div class="bgimage2"></div>
-    <form action="" method="post">
+    <form class="form" action="" method="post" id="regform">
         <div class="row  justify-content-center">
             <div class="col-md-9">
 
@@ -101,15 +102,24 @@ include('sqlreg.php')
                         </form>
                     </div>
                 </div>
-                <a href="/event_manager/user/login.php" class="badge m-3   p-3  badge-success reglink">Login</a>
             </div>
         </div>
 
     </form>
-</div> 
+    </div>
 
+    <div class="regsuccess" id="regsuc">
+        <span class="headreg">Registered Successful</span>
+        <span class="loginsu"><a href="/event_manager/user/login.php">Login</a></span>
+    </div>
 </body>
 
 </html>
 <!--
 -->
+<?php
+if (isset($regsuccess)) {
+    echo "<script>document.getElementById('regsuc').style.visibility='visible';
+    document.getElementById('regform').style.filter='blur(30px)';</script>";
+}
+?>

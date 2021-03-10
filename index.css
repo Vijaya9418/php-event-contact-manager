@@ -1,0 +1,209 @@
+.events {
+  background-color: aquamarine;
+  padding: 5%;
+  border-radius: 12px;
+  width: 60%;
+  display: inline-block;
+  vertical-align: top;
+  height: 100%;
+}
+.indcard {
+  display: block;
+  height: 40vh;
+}
+.Groups {
+  vertical-align: top;
+  display: inline-block;
+  background-color: aqua;
+  width: 25%;
+  padding: 5vw 5px;
+  border-radius: 12px;
+  height: 100%;
+}
+button {
+  padding: 10px;
+  background-color: greenyellow;
+  font-weight: bold;
+  color: black;
+  border-radius: 12px;
+}
+.posts {
+  background-color: cadetblue;
+  padding: 5%;
+  border-radius: 5%;
+  margin: 5px;
+  width: 85%;
+  display: block;
+  margin-top: 100px;
+}
+
+/* card code of create group*/
+.gc,
+.ge {
+  visibility: hidden;
+  display: block;
+  height: 40vh;
+  width: 40vw;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: rgba(3, 61, 61, 0.582);
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+}
+.cgtitle {
+  font-size: x-large;
+  display: block;
+}
+.inputcard {
+  display: block;
+  padding: 10px;
+  margin-top: 20px;
+}
+.inputcard label,
+.inputcard input,
+.inputcard textarea,
+.inputcard select {
+  padding: 5px;
+  background-color: antiquewhite;
+  border-radius: 10px;
+  vertical-align: top;
+}
+.inputcard label {
+  display: inline-block;
+  width: 150px;
+}
+.inputcard textarea {
+  vertical-align: top;
+
+  width: 50%;
+  height: 150px;
+  display: inline-block;
+}
+.inputcard select {
+  width: 50%;
+  display: inline-block;
+}
+.inputcard select option {
+  background-color: rgba(0, 0, 0, 0.267);
+  border-bottom: 12px;
+  margin: 1px;
+  display: inline-block;
+  padding: 5px;
+}
+.cgcbtn {
+  margin: 10px;
+}
+.gcerror {
+  color: red;
+  background-color: rgba(1, 22, 41, 0.671);
+  padding: 2px;
+  width: fit-content;
+  margin-left: 100px;
+  display: block;
+}
+.gcclose {
+  float: right;
+  background-color: orange;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+.ge {
+  width: 50vw;
+  min-width: 300px;
+  height: 60vh;
+  min-height: 500px;
+}
+
+/* Events and group display css here for ur reference and
+ if u like to play with me chess anytime tell there are somany
+  online platforms we can play few games.*/
+
+.gpcar {
+  display: block;
+  padding: 10px;
+  color: azure;
+  margin: 3px;
+  border-radius: 12px;
+  background-color: rgba(0, 0, 0, 0.39);
+}
+.gpcar img {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+}
+.gpname {
+  display: inline-block;
+  vertical-align: top;
+  padding: 5px;
+  margin-top: 10px;
+}
+.gpcar:hover {
+  background-color: rgba(15, 143, 255, 0.575);
+}
+.bigbox {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.bigbox img {
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+}
+
+.joinmem {
+  padding: 5px;
+  vertical-align: bottom;
+}
+.ntdis {
+  display: inline-block;
+  vertical-align: top;
+}
+.edec,
+.gpname,
+.etime,
+.eorg {
+  vertical-align: top;
+  display: block;
+  padding: 5px;
+  background-color: rgba(137, 43, 226, 0.377);
+  border-radius: 5px;
+  margin: 2px;
+}
+.notint {
+  background-color: yellow;
+}
+.grole {
+  padding: 5px;
+  display: inline-block;
+  font-weight: bold;
+  vertical-align: top;
+}
+.gimgside {
+  display: inline-block;
+}
+.gimgside img {
+  width: 30px;
+  height: 30px;
+}
+.memdis {
+  vertical-align: top;
+}
+.memdis img {
+  padding-top: 5px;
+  padding-right: 5px;
+  vertical-align: middle;
+}
+.addmem {
+  background-color: orange;
+  border-radius: 100%;
+  text-align: center;
+  transition: 0.5s;
+}
+.addmem:hover {
+  background-color: whitesmoke;
+}

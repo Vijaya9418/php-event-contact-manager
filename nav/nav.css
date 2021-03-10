@@ -66,7 +66,8 @@ nav input {
 .namedis {
   display: inline-block;
   margin-left: 10px;
-  color: #024439;
+  color: #61d4c1;
+  border-radius: 12px;
   float: right;
   font-weight: bold;
 
@@ -114,17 +115,18 @@ nav .btn2:hover {
   color: #f8f0f0;
 }
 .loginbtn {
-  background: none; 
-  
+  background: none;
+
   border: 1px solid aliceblue;
- 
+
   outline-offset: #090909 2px;
   padding: 8px 20px;
   align-items: center;
   font-family: "montserrat";
-color: aliceblue;
+  color: aliceblue;
   box-shadow: #f8f0f0;
   font-weight: bold;
+  transition-duration: padding 1s;
 }
 
 .loginbtn:hover {
@@ -133,7 +135,7 @@ color: aliceblue;
   border: 1px solid #024439;
   font-family: "montserrat";
   outline-offset: #090909 2px;
-  padding: 8px 20px;
+  padding: 10px 24px;
   align-items: center;
   color: #090909;
   box-shadow: #f8f0f0;
