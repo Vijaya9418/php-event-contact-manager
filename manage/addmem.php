@@ -1,11 +1,38 @@
 <?php
-
 $check = false;
 
 $servername = "localhost";
 $usernamea = "root";
 $password = "";
 $errorgpn = "";
+
+?>
+<div id="gadd" class="gadd">
+    <span class="cgtitle">Invite People</span>
+    <form action="" method="post">
+
+
+    </form>
+    <button class="gcclose" onclick="closegadd()">cancle</button>
+</div>
+<script>
+    function closegadd() {
+        document.getElementById('main').style.filter = 'blur(0px)';
+        document.getElementById('gadd').style.visibility = 'hidden';
+    }
+</script>
+<?php
+if (isset($_POST['addmembers'])) {
+    echo "<script> document.getElementById('main').style.filter = 'blur(4px)';
+    document.getElementById('gadd').style.visibility = 'visible';</script>";
+}
+?>
+?>
+
+
+<?php
+
+
 if (empty($_COOKIE['username'])) {
     $errorgpn = "Login first!";
 }
@@ -64,25 +91,5 @@ else {
             }
         }
     }
-}
-?>
-<div id="ginvite" class="ginvite">
-    <span class="cgtitle">Group Name</span>
-    <form action="" method="post">
-
-        <button class="cgcbtn" type="submit" name="creategroup">Create Group</button>
-    </form>
-    <button class="gcclose" onclick="closed()">cancle</button>
-</div>
-<script>
-    function closed() {
-        document.getElementById('main').style.filter = 'blur(0px)';
-        document.getElementById('ginvite').style.visibility = 'hidden';
-    }
-</script>
-<?php
-if (isset($_POST['creategroup'])) {
-    echo "<script> document.getElementById('main').style.filter = 'blur(4px)';
-    document.getElementById('ginvite').style.visibility = 'visible';</script>";
 }
 ?>

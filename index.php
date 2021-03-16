@@ -20,7 +20,7 @@ include('./manage/eventfetch.php') ?>
 <body>
     <div id="main">
         <h1>Home page</h1>
-        <button onclick="cgop()">Create a group</button>
+        <button class="mybtn" onclick="cgop()">Create a group</button>
         <button onclick="ceop()">Add a Event</button>
         <button>Post a message</button>
 
@@ -64,7 +64,7 @@ include('./manage/eventfetch.php') ?>
                             <div class='gimgside'>
                                 <div class='grole'>" . $groupsrole[$iv] . "</div>
                                 <div class='memdis'><img src='./images/members.png'>25</div>
-                                <div class='addmem'><img src='./images/addmem.png'></div>
+                                <button type='submit' onclick='invite()' name='addmembers' class='addmem' ><img src='./images/addmem.png'></button>
                             </div>
                             <span class='gpname'>" . $groups[$iv] . "</span></div>";
                         }
@@ -77,6 +77,7 @@ include('./manage/eventfetch.php') ?>
     </div>
     <?php include('./manage/eventdata.php') ?>
     <?php include('./manage/groupcreate.php') ?>
+    <?php include('./manage/invite.php') ?>
 </body>
 
 <script>
@@ -89,6 +90,11 @@ include('./manage/eventfetch.php') ?>
     function ceop() {
         document.getElementById('main').style.filter = 'blur(4px)';
         document.getElementById('ge').style.visibility = 'visible';
+    }
+
+    function invite() {
+        document.getElementById('main').style.filter = 'blur(4px)';
+        document.getElementById('ginvite').style.visibility = 'visible';
     }
 </script>
 
