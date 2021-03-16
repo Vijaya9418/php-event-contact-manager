@@ -76,7 +76,7 @@ else {
         </span>
         <button class="cgcbtn" type="submit" name="creategroup">Create Group</button>
     </form>
-    <button class="gcclose" onclick="closed()">cancle</button>
+    <button class="gcclose" onclick="closed()">cancel</button>
 </div>
 <script>
     function closed() {
