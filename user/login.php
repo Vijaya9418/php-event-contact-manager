@@ -46,7 +46,7 @@ include('sqllogin.php')
                         </div>
                         <span class="re">
                             <span class="reb">
-                                <button type="submit" name="login" class="btn3">Login</button>
+                                <button type="submit" name="login" class="btn3"> <span>Login </span></button>
                             </span>
                             <p class="ok">Don't have an account? </p>
                             <a href="/event_manager/user/reg.php" class="reglink">Register</a>

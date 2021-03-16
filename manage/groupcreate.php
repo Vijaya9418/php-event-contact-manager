@@ -70,13 +70,13 @@ else {
     <span class="cgtitle">New Group</span>
     <form action="" method="post">
         <span class="inputcard">
-            <label for="groupn">Group Name</label>
+            <label  for="groupn">Group Name :-</label>
             <input type="text" name="groupn" id="groupn" placeholder="Name">
             <span class="gcerror"><?php echo $errorgpn; ?></span>
         </span>
         <button class="cgcbtn" type="submit" name="creategroup">Create Group</button>
     </form>
-    <button class="gcclose" onclick="closed()">cancle</button>
+    <button class="gcclose" onclick="closed()">Cancel</button>
 </div>
 <script>
     function closed() {
