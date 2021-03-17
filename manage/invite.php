@@ -11,7 +11,7 @@ if (empty($_COOKIE['username'])) {
 }
 // Create connection
 else {
-    if (isset($_POST['invite'])) {
+    if (isset($_POST['invitemem'])) {
 
         if (empty($_POST['groupn'])) {
             $errorgpn = "Name should be provided!";
@@ -67,22 +67,37 @@ else {
 }
 ?>
 <div id="ginvite" class="ginvite">
-    <span class="cgtitle">Group Name</span>
+    <span class="cgtitle">Invite People</span>
     <form action="" method="post">
+        <?php
+        for ($iv = 0; $iv < count($users); $iv++) {
 
-        <button class="cgcbtn" type="submit" name="creategroup">Create Group</button>
+            echo "<span class='usrscss'>" . $users[$iv] . "<img id='imgtick" . $iv . "' onclick='imagechange(this)' src='./images/checkbox.png'></span>";
+        }
+        ?>
+        <button class="cgcbtn" type="submit" name="invitemem">Invite</button>
     </form>
-    <button class="gcclose" onclick="closed()">cancle</button>
+    <button class="gcclose" onclick="closed()">cancel</button>
 </div>
 <script>
     function closed() {
         document.getElementById('main').style.filter = 'blur(0px)';
         document.getElementById('ginvite').style.visibility = 'hidden';
     }
+
+    function imagechange(a) {
+        console.log(a);
+        console.log(document.getElementById(a.id).src);
+        if (!document.getElementById(a.id).src.endsWith('/images/tick.png'))
+            document.getElementById(a.id).src = './images/tick.png';
+        else
+            document.getElementById(a.id).src = './images/checkbox.png';
+
+    }
 </script>
 <?php
-if (isset($_POST['creategroup'])) {
-    echo "<script> document.getElementById('main').style.filter = 'blur(4px)';
-    document.getElementById('ginvite').style.visibility = 'visible';</script>";
+if (isset($_POST['invitemem'])) {
+    echo "<script> document.getElementById('main').style.filter = 'blur(0px)';
+    document.getElementById('ginvite').style.visibility = 'hidden';</script>";
 }
 ?>

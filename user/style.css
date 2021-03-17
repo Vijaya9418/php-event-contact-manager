@@ -43,6 +43,8 @@
 .reb {
   display: block;
 }
+
+
 .btn3 {
   float: right;
   background: none;
@@ -53,15 +55,36 @@
   margin: 5px;
   display: block;
   color: aliceblue;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
 }
 
-.btn3:hover {
-  float: right;
+.btn3 span {
+
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.btn3 span:after {
   background: rgb(48, 48, 48);
-  border: 1px solid #fffefe;
-  padding: 5px 18px;
-  font-size: 20px;
-  font-family: "montserrat";
-  margin: 5px;
-  color: aliceblue;
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.btn3:hover span {
+  padding-right: 25px;
+  background: rgb(48, 48, 48);
+}
+
+.btn3:hover span:after {
+  background: rgb(48, 48, 48);
+  opacity: 1;
+  right: 0;
 }

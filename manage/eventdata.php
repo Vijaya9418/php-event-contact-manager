@@ -142,7 +142,7 @@ else {
 </script>
 <?php
 if (isset($_POST['creategroup'])) {
-    echo "<script> document.getElementById('main').style.filter = 'blur(4px)';
-    document.getElementById('ge').style.visibility = 'visible';</script>";
+    echo "<script> document.getElementById('main').style.filter = 'blur(0px)';
+    document.getElementById('ge').style.visibility = 'hidden';</script>";
 }
 ?>

@@ -1,11 +1,33 @@
+.op{
+  background-color: #d2d8d6;
+  background-image: linear-gradient(315deg, #d2d8d6 0%, #dce8e0 74%);
+  
+  
+}
+
 .events {
-  background-color: aquamarine;
+  background-color: #6b0f1a;
+ background-image: linear-gradient(315deg, #6b0f1a 0%, #b91372 74%);
+color: black;
+size: 15px;
   padding: 5%;
   border-radius: 12px;
-  width: 60%;
+  border-style: double;
+  border-width: thick;
+  width: 55%;
+  margin-top: 1%;
   display: inline-block;
   vertical-align: top;
   height: 100%;
+  overflow: scroll;
+}
+.events:hover{
+  background-color: #6b0f1a;
+  background-image: linear-gradient(315deg, #b91372 0%, #6b0f1a 74%);
+  border-style: solid;
+  color: white;
+  border-color: black;
+ 
 }
 .indcard {
   display: block;
@@ -14,39 +36,139 @@
 .Groups {
   vertical-align: top;
   display: inline-block;
-  background-color: aqua;
-  width: 25%;
+  background-color: #6b0f1a;
+  background-image: linear-gradient(300deg, #b91372 0%, #851d29 74%);
+  margin-top: 1%;
+  border-style: double;
+  width: 30%;
+  overflow: scroll;
+  size: 15px;
   padding: 5vw 5px;
   border-radius: 12px;
   height: 100%;
 }
-button {
-  padding: 10px;
-  background-color: greenyellow;
-  font-weight: bold;
-  color: black;
-  border-radius: 12px;
+.Groups:hover
+{
+  background-color: #6b0f1a;
+ background-image: linear-gradient(315deg, #6b0f1a 0%, #b91372 74%);
+ border-style: solid; 
+ color: black;
+ border-color: black;
+ border-width: thick;
 }
+.mybtn1 {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #492a72;
+  background-image: linear-gradient(315deg, #0e011f 30%, #6803c7 74%);
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.mybtn1:hover
+{
+  background-color: #1d0141;
+  background-image: linear-gradient(315deg, #6803c7 30%, #0e011f 74%);
+}
+
+.mybtn1:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.mybtn2 {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #492a72;
+  background-image: linear-gradient(315deg, #0e011f 20%, #6803c7 74%, #0e011f 30%);
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.mybtn2:hover {
+  background-color: #492a72;
+  background-image: linear-gradient(315deg, #251836 30%, #1c1027 74%, #0e011f 20%);
+}
+
+.mybtn2:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.mybtn3 {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #492a72;
+  background-image: linear-gradient(315deg, #6803c7 0%, #0e011f 74%);
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.mybtn3:hover {
+  background-color: #492a72;
+  background-image: linear-gradient(315deg, #0e011f 0%,  #6803c7 74%);
+}
+
+.mybtn3:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
 .posts {
-  background-color: cadetblue;
+  background-color: #772f1a;
+  background-image: linear-gradient(315deg, #772f1a 0%, #f2a65a 74%);
+  
   padding: 5%;
   border-radius: 5%;
-  margin: 5px;
+  margin: 1%;
+  margin-top: 2%;
   width: 85%;
   display: block;
   margin-top: 100px;
 }
 
+.posts:hover{
+  background-color: #772f1a;
+  background-image: linear-gradient(315deg, #f2a65a 0%, #772f1a 74%);
+  
+}
+
 /* card code of create group*/
 .gc,
-.ge {
+.ge ,.ginvite{
   visibility: hidden;
   display: block;
   height: 40vh;
   width: 40vw;
   padding: 20px;
   border-radius: 12px;
-  background-color: rgba(3, 61, 61, 0.582);
+  background-color: #63d471;
+background-image: linear-gradient(315deg, #63d471 0%, #233329 74%);
+
   transform: translate(-50%, -50%);
   position: absolute;
   top: 50%;
@@ -56,25 +178,35 @@ button {
 .cgtitle {
   font-size: x-large;
   display: block;
+  color: wheat;
+  font-weight: bold;
+  text-shadow: yellow;
+  font-style: italic;
 }
 .inputcard {
   display: block;
   padding: 10px;
   margin-top: 20px;
 }
-.inputcard label,
-.inputcard input,
-.inputcard textarea,
-.inputcard select {
-  padding: 5px;
+.inputcard label
+{
+  color: whitesmoke;
+  size: 25px;
+  margin: 10px;
+ 
+  margin-left: 180px;
+  
+}
+.inputcard input
+{
+  padding: 6px;
   background-color: antiquewhite;
   border-radius: 10px;
-  vertical-align: top;
+  border-style: solid;
+  
 }
-.inputcard label {
-  display: inline-block;
-  width: 150px;
-}
+
+
 .inputcard textarea {
   vertical-align: top;
 
@@ -82,10 +214,7 @@ button {
   height: 150px;
   display: inline-block;
 }
-.inputcard select {
-  width: 50%;
-  display: inline-block;
-}
+
 .inputcard select option {
   background-color: rgba(0, 0, 0, 0.267);
   border-bottom: 12px;
@@ -94,22 +223,63 @@ button {
   padding: 5px;
 }
 .cgcbtn {
-  margin: 10px;
+float: left;
+background-color: #b2505c;
+background-image: linear-gradient(315deg, #b2505c 0%, #4c131a 74%);
+color: white;
+font-weight: bold;
+position: absolute;
+bottom: 50px;
+left: 20%;
+padding: 9px;
+border-radius: 10px;
+  
 }
+
+.cgcbtn:hover
+{
+  background-color: #923cb5;
+  background-image: linear-gradient(147deg, #923cb5 0%, #000000 74%);
+}
+
+.cgcbtn:active {
+  background-color: #b90f0f;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
 .gcerror {
   color: red;
   background-color: rgba(1, 22, 41, 0.671);
-  padding: 2px;
+  padding: 5px;
   width: fit-content;
-  margin-left: 100px;
+  margin-left: 260px;
+  margin-top: 60px;
   display: block;
 }
 .gcclose {
   float: right;
-  background-color: orange;
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
+  background-color: #b2505c;
+  background-image: linear-gradient(315deg, #b2505c 0%, #4c131a 74%);
+  color: white;
+  font-weight: bold;
+position: absolute;
+bottom: 50px;
+right: 20%;
+padding: 9px;
+border-radius: 10px;
+}
+
+.gcclose:hover
+{
+  background-color: #923cb5;
+  background-image: linear-gradient(147deg, #923cb5 0%, #000000 74%);
+}
+
+.gcclose:active {
+  background-color: #b90f0f;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 .ge {
   width: 50vw;
@@ -206,4 +376,37 @@ button {
 }
 .addmem:hover {
   background-color: whitesmoke;
+}
+
+.usrscss{
+  color: whitesmoke;
+  display: block;
+  background-color: rgba(255, 235, 205, 0.349);
+  padding: 7px;
+  border-radius: 5px;
+  margin: 2px;
+}
+.usrscss img{
+  width: 20px;
+  height: 20px;
+  float: right;
+  margin-right: 50px;
+}
+
+/* scrollbars code --------*/
+
+::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.4);
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(0, 108, 248);
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(7, 30, 241);
 }

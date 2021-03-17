@@ -18,11 +18,12 @@ include('./manage/eventfetch.php') ?>
 </head>
 
 <body>
-    <div id="main">
+    <div class="op" id="main">
         <h1>Home page</h1>
-        <button class="mybtn" onclick="cgop()">Create a group</button>
-        <button onclick="ceop()">Add a Event</button>
-        <button>Post a message</button>
+
+        <button class="mybtn1" onclick="cgop()">Create a group</button>
+        <button class="mybtn2" onclick="ceop()">Add a Event</button>
+        <button class="mybtn3">Post a message</button>
 
         <span class="indcard">
             <span class="events">New Events

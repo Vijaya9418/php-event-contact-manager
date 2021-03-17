@@ -70,23 +70,23 @@ else {
     <span class="cgtitle">New Group</span>
     <form action="" method="post">
         <span class="inputcard">
-            <label for="groupn">Group Name</label>
+            <label for="groupn">Group Name :-</label>
             <input type="text" name="groupn" id="groupn" placeholder="Name">
             <span class="gcerror"><?php echo $errorgpn; ?></span>
         </span>
         <button class="cgcbtn" type="submit" name="creategroup">Create Group</button>
     </form>
-    <button class="gcclose" onclick="closed()">cancle</button>
+    <button class="gcclose" onclick="closegroup()">Cancel</button>
 </div>
 <script>
-    function closed() {
+    function closegroup() {
         document.getElementById('main').style.filter = 'blur(0px)';
         document.getElementById('gc').style.visibility = 'hidden';
     }
 </script>
 <?php
 if (isset($_POST['creategroup'])) {
-    echo "<script> document.getElementById('main').style.filter = 'blur(4px)';
-    document.getElementById('gc').style.visibility = 'visible';</script>";
+    echo "<script> document.getElementById('main').style.filter = 'blur(0px)';
+    document.getElementById('gc').style.visibility = 'hidden';</script>";
 }
 ?>
