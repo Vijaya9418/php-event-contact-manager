@@ -1,17 +1,44 @@
 <?php
-
 $check = false;
 
 $servername = "localhost";
 $usernamea = "root";
 $password = "";
 $errorgpn = "";
+
+?>
+<div id="gadd" class="gadd">
+    <span class="cgtitle">Invite People</span>
+    <form action="" method="post">
+
+
+    </form>
+    <button class="gcclose" onclick="closegadd()">cancle</button>
+</div>
+<script>
+    function closegadd() {
+        document.getElementById('main').style.filter = 'blur(0px)';
+        document.getElementById('gadd').style.visibility = 'hidden';
+    }
+</script>
+<?php
+if (isset($_POST['addmembers'])) {
+    echo "<script> document.getElementById('main').style.filter = 'blur(4px)';
+    document.getElementById('gadd').style.visibility = 'visible';</script>";
+}
+?>
+?>
+
+
+<?php
+
+
 if (empty($_COOKIE['username'])) {
     $errorgpn = "Login first!";
 }
 // Create connection
 else {
-    if (isset($_POST['creategroup'])) {
+    if (isset($_POST['invite'])) {
 
         if (empty($_POST['groupn'])) {
             $errorgpn = "Name should be provided!";
@@ -22,14 +49,14 @@ else {
                 echo "Failed to connect!";
                 die("Connection failed: " . $conn->connect_error);
             }
-            $sql = "SELECT groupname from groupdata";
+            $sql = "SELECT * from invitedata";
 
             $result = $conn->query($sql);
             if (!$result) {
                 $ipl = "CREATE TABLE groupdata (
             groupname  VARCHAR(30) NOT NULL,
             username VARCHAR(30) NOT NULL,
-            roleplay VARCHAR(30) NOT NULL,
+            jstatus VARCHAR(30) NOT NULL,
             reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
             )";
                 if ($conn->query($ipl) === TRUE) {
@@ -51,7 +78,7 @@ else {
             }
             if (!$check) {
                 $usnam = $_COOKIE['username'];
-                $sql = "INSERT INTO groupdata (groupname,username,roleplay) VALUES ('$gpname','$usnam','Admin')";
+                $sql = "INSERT INTO groupdata (groupname,username,jstatus) VALUES ('$gpname','$usnam','invited')";
 
                 if ($conn->query($sql) === TRUE) {
                     echo "Super successful";
@@ -64,29 +91,5 @@ else {
             }
         }
     }
-}
-?>
-<div id="gc" class="gc">
-    <span class="cgtitle">New Group</span>
-    <form action="" method="post">
-        <span class="inputcard">
-            <label for="groupn">Group Name :-</label>
-            <input type="text" name="groupn" id="groupn" placeholder="Name">
-            <span class="gcerror"><?php echo $errorgpn; ?></span>
-        </span>
-        <button class="cgcbtn" type="submit" name="creategroup">Create Group</button>
-    </form>
-    <button class="gcclose" onclick="closegroup()">Cancel</button>
-</div>
-<script>
-    function closegroup() {
-        document.getElementById('main').style.filter = 'blur(0px)';
-        document.getElementById('gc').style.visibility = 'hidden';
-    }
-</script>
-<?php
-if (isset($_POST['creategroup'])) {
-    echo "<script> document.getElementById('main').style.filter = 'blur(0px)';
-    document.getElementById('gc').style.visibility = 'hidden';</script>";
 }
 ?>

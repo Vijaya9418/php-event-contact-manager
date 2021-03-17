@@ -1,6 +1,6 @@
 nav {
   padding: 0.9vw;
-  height: 65px;
+  height: 35px;
   background-color: #0d7967;
   background-image: linear-gradient(315deg, #292929 0%, #0f0f0f 74%);
   border: 2px solid #024439;
@@ -17,7 +17,6 @@ nav a {
   text-decoration: none;
   color: aliceblue;
   font-weight: bold;
-
   margin-right: 10px;
   position: relative;
   overflow: hidden;
@@ -30,9 +29,7 @@ nav a::before {
   position: absolute;
   left: 0;
   width: 100%;
-
   height: 0%;
-
   background-color: #2a2a72;
   background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
   z-index: -1;
