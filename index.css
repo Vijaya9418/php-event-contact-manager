@@ -1,6 +1,12 @@
 .op{
-  background-color: #d2d8d6;
-  background-image: linear-gradient(315deg, #d2d8d6 0%, #dce8e0 74%);
+  background-image: url("./images/back1.jpg");
+  background-repeat: no-repeat;
+  
+  background-attachment: fixed;
+  
+  background-size: cover;
+  padding-top: 2%;
+  
   
   
 }
@@ -11,10 +17,11 @@
 color: black;
 size: 15px;
   padding: 5%;
+  margin: 3%;
   border-radius: 12px;
   border-style: double;
   border-width: thick;
-  width: 55%;
+  width: 50%;
   margin-top: 1%;
   display: inline-block;
   vertical-align: top;
@@ -59,6 +66,7 @@ size: 15px;
 .mybtn1 {
   display: inline-block;
   padding: 15px 25px;
+  margin-left: 18%;
   font-size: 15px;
   cursor: pointer;
   text-align: center;
@@ -144,7 +152,7 @@ size: 15px;
   
   padding: 5%;
   border-radius: 5%;
-  margin: 1%;
+  margin: 2%;
   margin-top: 2%;
   width: 85%;
   display: block;
@@ -296,9 +304,10 @@ border-radius: 10px;
   display: block;
   padding: 10px;
   color: azure;
-  margin: 3px;
+  margin: 5px;
   border-radius: 12px;
-  background-color: rgba(0, 0, 0, 0.39);
+  margin-bottom: 15px;
+  background-color: rgba(0, 0, 0, 0.493);
 }
 .gpcar img {
   width: 100px;
@@ -327,6 +336,7 @@ border-radius: 10px;
 
 .joinmem {
   padding: 5px;
+  border-radius: 10px;
   vertical-align: bottom;
 }
 .ntdis {
@@ -340,12 +350,18 @@ border-radius: 10px;
   vertical-align: top;
   display: block;
   padding: 5px;
-  background-color: rgba(137, 43, 226, 0.377);
+  background-color: #492a72;
+  background-image: linear-gradient(315deg, #0e011f 0%,  #6803c7 74%);
   border-radius: 5px;
   margin: 2px;
 }
 .notint {
   background-color: yellow;
+  border-radius: 10px;
+  padding: 5px;
+}
+.notint:hover{
+background-color: orangered;
 }
 .grole {
   padding: 5px;
@@ -393,6 +409,27 @@ border-radius: 10px;
   margin-right: 50px;
 }
 
+.join
+{
+  padding: 5px;
+  border-radius: 10px;
+
+}
+
+.join:hover
+{
+ background-color: rgb(36, 33, 33);
+ color: white;
+  
+}
+
+.eventn,
+.eventdate,
+.eventn,
+.eventinv
+{
+  padding-right: 10px;
+}
 /* scrollbars code --------*/
 
 ::-webkit-scrollbar {
