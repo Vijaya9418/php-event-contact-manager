@@ -341,8 +341,17 @@
   border-radius: 5px;
   margin: 2px;
 }
-.notint {
+.notint,
+.edit {
   background-color: yellow;
+  width: 150px;
+  display: inline-block;
+  border-radius: 6px;
+  padding: 5px;
+  box-shadow: 2px 2px 2px black;
+}
+.edit {
+  background-color: darkgray;
 }
 .grole {
   padding: 5px;
@@ -418,4 +427,33 @@
 }
 .gnamek p {
   display: inline-block;
+}
+
+.delete {
+  padding: 5px;
+  border-radius: 6px;
+  box-shadow: 2px 2px 2px black;
+  background-color: orange;
+}
+.delete:hover {
+  background-color: red;
+}
+.join,
+.joined,
+.ignored {
+  padding: 5px;
+  width: 150px;
+  border-radius: 6px;
+  box-shadow: 2px 2px 2px black;
+  background-color: rgb(50, 184, 23);
+}
+.join:hover {
+  background-color: greenyellow;
+  display: inline-block;
+}
+.joined {
+  background-color: cornflowerblue;
+}
+.ignored {
+  background-color: cadetblue;
 }

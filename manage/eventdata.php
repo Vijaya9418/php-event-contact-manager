@@ -30,7 +30,7 @@ else {
                 echo "Failed to connect!";
                 die("Connection failed: " . $conn->connect_error);
             }
-            $sql = "SELECT groupname from eventdata";
+            $sql = "SELECT * from eventdata";
 
             $result = $conn->query($sql);
             if (!$result) {
@@ -72,6 +72,10 @@ else {
                 } else {
                     echo "Small error!" . $conn->error;
                 }
+
+                echo "<script> document.getElementById('main').style.filter = 'blur(0px)';
+                    document.getElementById('ge').style.visibility = 'hidden';</script>";
+
                 $conn->close();
             } else {
                 $errorevn = "Try a little different event name this one exists it may confuse.";
@@ -80,6 +84,7 @@ else {
     }
 }
 ?>
+
 <div id="ge" class="ge">
     <span class="cgtitle">New Event</span>
     <form action="" method="post">
@@ -140,9 +145,3 @@ else {
         document.getElementById('ge').style.visibility = 'hidden';
     }
 </script>
-<?php
-if (isset($_POST['creategroup'])) {
-    echo "<script> document.getElementById('main').style.filter = 'blur(0px)';
-    document.getElementById('ge').style.visibility = 'hidden';</script>";
-}
-?>

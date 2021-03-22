@@ -5,6 +5,7 @@ $password = "";
 $groups = array();
 $groupsrole = array();
 $users = array();
+$gnocount = array();
 if (empty($_COOKIE['username'])) {
     $errorgpn = "Login first!";
 } else {
@@ -17,7 +18,11 @@ if (empty($_COOKIE['username'])) {
         // output data of each row
         while ($row = $result->fetch_assoc()) {
             //echo $row['username'];
-
+            if (array_key_exists($row['groupname'], $gnocount)) {
+                $gnocount[$row['groupname']] += 1;
+            } else {
+                $gnocount[$row['groupname']] = 1;
+            }
             if ($username == $row['username']) {
                 array_push($groups, $row['groupname']);
                 array_push($groupsrole, $row['roleplay']);
