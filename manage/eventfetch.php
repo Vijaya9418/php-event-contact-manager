@@ -6,6 +6,7 @@ $eventn = array();
 $eventd = array();
 $eventt = array();
 $evento = array();
+$status = array();
 if (empty($_COOKIE['username'])) {
     $errorgpn = "Login first!";
 } else {

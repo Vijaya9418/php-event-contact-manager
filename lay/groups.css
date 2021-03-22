@@ -1,0 +1,19 @@
+.inviteg {
+  display: block;
+  background-color: rgba(137, 43, 226, 0.459);
+  padding: 20px;
+  margin: 5px;
+}
+.joininvite {
+  padding: 5px;
+  background-color: greenyellow;
+  float: right;
+  margin-left: 50px;
+  box-shadow: 2px 2px 2px black;
+}
+.ignoreinvite {
+  padding: 5px;
+  background-color: red;
+  float: right;
+  box-shadow: 2px 2px 2px black;
+}
