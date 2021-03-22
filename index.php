@@ -21,7 +21,7 @@ include('./eventmanage/eventmanage.php') ?>
 
 <body>
     <div class="op" id="main">
-        <h1>Home page</h1>
+      
 
         <button class="mybtn1" onclick="cgop()">Create a group</button>
         <button class="mybtn2" onclick="ceop()">Add a Event</button>
