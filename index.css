@@ -188,7 +188,12 @@
   text-shadow: yellow;
   font-style: italic;
 }
-.inputcard {
+.ge {
+  vertical-align: top;
+}
+.inputcard,
+.spanfirst,
+.spansecond {
   display: block;
   padding: 10px;
   margin-top: 20px;
@@ -197,16 +202,19 @@
   color: whitesmoke;
   size: 25px;
   margin: 10px;
-
-  margin-left: 180px;
+  vertical-align: top;
 }
-.inputcard input {
+.inputcard input,
+.inputcard textarea,
+.inputcard select {
   padding: 6px;
   background-color: antiquewhite;
   border-radius: 10px;
   border-style: solid;
 }
-
+.inputcard select {
+  width: 200px;
+}
 .inputcard textarea {
   vertical-align: top;
 
@@ -214,7 +222,13 @@
   height: 150px;
   display: inline-block;
 }
+.ecerror {
+  color: rgb(209, 203, 203);
+  font-size: x-large;
+  padding: 5px;
 
+  border-radius: 6px;
+}
 .inputcard select option {
   background-color: rgba(0, 0, 0, 0.267);
   border-bottom: 12px;
@@ -222,6 +236,7 @@
   display: inline-block;
   padding: 5px;
 }
+
 .cgcbtn {
   float: left;
   background-color: #b2505c;
@@ -234,7 +249,12 @@
   padding: 9px;
   border-radius: 10px;
 }
-
+.formsize {
+  display: block;
+  height: 45vh;
+  width: 100%;
+  overflow: scroll;
+}
 .cgcbtn:hover {
   background-color: #923cb5;
   background-image: linear-gradient(147deg, #923cb5 0%, #000000 74%);
@@ -279,7 +299,7 @@
   transform: translateY(4px);
 }
 .ge {
-  width: 50vw;
+  width: 80vw;
   min-width: 300px;
   height: 60vh;
   min-height: 500px;
@@ -296,6 +316,11 @@
   margin: 3px;
   border-radius: 12px;
   background-color: rgba(0, 0, 0, 0.39);
+}
+.gpcar form {
+  display: inline-block;
+  width: 110px;
+  vertical-align: top;
 }
 .gpcar img {
   width: 100px;
@@ -456,4 +481,11 @@
 }
 .ignored {
   background-color: cadetblue;
+}
+
+.spanfirst {
+  display: inline-block;
+}
+.spansecond {
+  display: inline-block;
 }

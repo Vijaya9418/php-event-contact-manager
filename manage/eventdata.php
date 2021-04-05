@@ -82,44 +82,100 @@ else {
             }
         }
     }
+
+    if (isset($_POST['imguploadevent'])) {
+
+        echo "<div id='gcimg' class='gc' style='visibility:visible'>
+        <form method='post'>
+        <h3 style='color:white'>" . $_POST['gnimg'] . "</h3>
+        <h5 style='color:white'>To upload ur image go to Explore tab and upload your image with a uique name and added it here.</h5>
+        <input hidden name='gpname' value='" . $_POST['gnimg'] . "'>
+        <input placeholder='Image name' required name='imgname'>
+        <button name='imguploadeventf'>Submit</button>
+        </form>
+        <button onclick='closeimg()'>Close</button>
+        <script>
+        function closeimg(){
+            document.getElementById('gcimg').style.visibility='hidden';
+        }
+        </script>
+        </div>";
+    }
+    if (isset($_POST['imguploadeventf'])) {
+        echo "<h1>I am working</h1>";
+        $conn = new mysqli($servername, $usernamea, $password, "logindata");
+        if ($conn->connect_error) {
+            echo "Failed to connect!";
+            die("Connection failed: " . $conn->connect_error);
+        }
+        $sql = "SELECT img from eventdata";
+
+        $result = $conn->query($sql);
+        if (!$result) {
+            $ipl = "ALTER TABLE eventdata
+            ADD img varchar(255);";
+            if ($conn->query($ipl) === TRUE) {
+                echo "Table goupdata created successfully";
+                echo "<script>Table created successful</script>";
+            } else {
+                echo "Error creating table: " . $conn->error;
+            }
+        }
+        if ($_POST['imgname'] == "") {
+            echo "<script>alert('image name should not be empty uplaod the image from explore tab!')</script>";
+        } else {
+            $imgname = $_POST['imgname'];
+            $groupnameimg = $_POST['gpname'];
+            $sql = "update eventdata set img='$imgname' WHERE eventname='$groupnameimg'";
+
+            if ($conn->query($sql) === TRUE) {
+                echo "Super successful";
+            } else {
+                echo "Small error!" . $conn->error;
+            }
+        }
+        $conn->close();
+    }
 }
 ?>
 
 <div id="ge" class="ge">
     <span class="cgtitle">New Event</span>
+    <span class="ecerror"><?php echo $errorevn; ?></span>
     <form action="" method="post">
+        <div class="formsize">
+            <span class="inputcard" style="display: inline-block;">
+                <label for="eventn">Event Name</label>
+                <input type="text" name="eventn" id="eventn" placeholder="Name">
 
-        <span class="inputcard">
-            <label for="eventn">Event Name</label>
-            <input type="text" name="eventn" id="eventn" placeholder="Name">
-            <span class="ecerror"><?php echo $errorevn; ?></span>
-        </span>
+            </span>
+            <span class="inputcard" style="display: inline-block;">
+                <label for="eventdate">Date</label>
+                <input type='datetime-local' name="eventdate" id="eventdate" placeholder="select date">
+                <span class="ecerror"><?php echo $errordate; ?></span>
+            </span>
 
-        <span class="inputcard">
-            <label for="eventdec">Details</label>
-            <textarea name="eventdec" id="eventdec" placeholder="Event details"></textarea>
-            <span class="ecerror"><?php echo $errordec; ?></span>
-        </span>
+            <span class="inputcard">
+                <label for="eventdec">Details</label>
+                <textarea name="eventdec" id="eventdec" placeholder="Event details"></textarea>
+                <span class="ecerror"><?php echo $errordec; ?></span>
+            </span>
 
-        <span class="inputcard">
-            <label for="eventdate">Date</label>
-            <input type='datetime-local' name="eventdate" id="eventdate" placeholder="select date">
-            <span class="ecerror"><?php echo $errordate; ?></span>
-        </span>
 
-        <span class="inputcard">
-            <label for="eventn">Organisded By</label>
-            <input type="text" value='<?php if (isset($_COOKIE['username'])) echo $_COOKIE['username']; ?>' name="orgby" id="orgby" placeholder="Name">
 
-        </span>
+            <span class="inputcard" style="display: inline-block;">
+                <label for="eventn">Organisded By</label>
+                <input readonly type="text" value='<?php if (isset($_COOKIE['username'])) echo $_COOKIE['username']; ?>' name="orgby" id="orgby" placeholder="Name">
 
-        <span class="inputcard">
-            <label for="eventinv">Invities</label>
-            <select required multiple name="eventinv" id="eventinv">
-                <option value="Public">Public</option>
-            </select>
-        </span>
+            </span>
 
+            <span class="inputcard" style="display: inline-block;">
+                <label for="eventinv">Invities</label>
+                <select required multiple name="eventinv" id="eventinv">
+                    <option value="Public">Public</option>
+                </select>
+            </span>
+        </div>
         <button class="cgcbtn" type="submit" name="createevent">Create Event</button>
     </form>
     <button class="gcclose" onclick="closede()">cancle</button>
