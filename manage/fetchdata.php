@@ -6,6 +6,7 @@ $groups = array();
 $groupsrole = array();
 $users = array();
 $gnocount = array();
+$imgg = array();
 if (empty($_COOKIE['username'])) {
     $errorgpn = "Login first!";
 } else {
@@ -26,6 +27,9 @@ if (empty($_COOKIE['username'])) {
             if ($username == $row['username']) {
                 array_push($groups, $row['groupname']);
                 array_push($groupsrole, $row['roleplay']);
+                if (isset($row['img'])) {
+                    $imgg[$row['groupname']] = $row['img'];
+                }
             }
         }
     }

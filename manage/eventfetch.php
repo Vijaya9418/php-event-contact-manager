@@ -7,6 +7,7 @@ $eventd = array();
 $eventt = array();
 $evento = array();
 $status = array();
+$eimgg = array();
 if (empty($_COOKIE['username'])) {
     $errorgpn = "Login first!";
 } else {
@@ -26,6 +27,9 @@ if (empty($_COOKIE['username'])) {
                         array_push($eventd, $row['descriptions']);
                         array_push($eventt, $row['timesd']);
                         array_push($evento, $row['organisedby']);
+                        if (isset($row['img'])) {
+                            $eimgg[$row['eventname']] = $row['img'];
+                        }
                     }
                 }
                 if ('Public' == $row['inv']) {
@@ -33,6 +37,9 @@ if (empty($_COOKIE['username'])) {
                     array_push($eventd, $row['descriptions']);
                     array_push($eventt, $row['timesd']);
                     array_push($evento, $row['organisedby']);
+                    if (isset($row['img'])) {
+                        $eimgg[$row['eventname']] = $row['img'];
+                    }
                 }
             }
         }
