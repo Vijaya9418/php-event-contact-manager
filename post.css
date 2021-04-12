@@ -1,0 +1,176 @@
+.gpost,
+.dpost {
+  display: block;
+  width: 80vw;
+  height: 80vh;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  background-color: burlywood;
+  z-index: 3;
+  position: absolute;
+  border-radius: 12px;
+  visibility: hidden;
+}
+.fhalf {
+  display: inline-block;
+  width: 48%;
+  height: 100%;
+  vertical-align: top;
+  background-color: rgba(0, 0, 0, 0.39);
+  text-align: center;
+}
+
+.shalf {
+  width: 48%;
+  height: 100%;
+  display: inline-block;
+  vertical-align: top;
+  background-color: rgba(0, 0, 0, 0.137);
+}
+.titile {
+  display: inline-block;
+  color: white;
+  font-size: large;
+}
+.fhalf input {
+  display: inline-block;
+  background-color: bisque;
+  padding: 5px;
+  border-radius: 6px;
+}
+.fhalf textarea {
+  width: 30vw;
+  height: 65vh;
+  border-radius: 12px;
+
+  box-shadow: 5px 5px 13px rgb(53, 45, 45);
+  padding: 2%;
+  margin: auto;
+  display: block;
+}
+
+.shalf iframe {
+  width: 98%;
+  height: 98%;
+  overflow: scroll;
+}
+.postadd,
+.postclose {
+  float: right;
+  display: block;
+  margin: 10px;
+  padding: 5px;
+  border-radius: 6px;
+  background-color: seagreen;
+  color: rgb(77, 243, 255);
+  font-weight: bold;
+  margin-right: 50px;
+}
+.postclose {
+  float: left;
+  margin-left: 50px;
+  background-color: coral;
+}
+.postadd:hover,
+.postclose:hover {
+  background-color: aquamarine;
+}
+.error {
+  color: red;
+  background-color: white;
+  font-size: 12px;
+  padding: 2px;
+  border-radius: 5px;
+}
+.pview {
+  display: block;
+  width: 98%;
+  margin: auto;
+}
+.pview label {
+  color: whitesmoke;
+}
+.pview select {
+  background-color: bisque;
+  width: 70%;
+}
+.pview select option {
+  display: inline-block;
+  margin: 2px;
+  background-color: aqua;
+  border-radius: 6px;
+}
+.title {
+  padding: 5px;
+  border-radius: 5px;
+  margin: 6px;
+  font-size: x-large;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.postcard:hover {
+  background-color: cornflowerblue;
+}
+.postcard {
+  padding: 10px;
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  overflow: scroll;
+  background-color: burlywood;
+  box-shadow: 10px 10px 12px blueviolet;
+  margin: 12px;
+}
+.auth,
+.dec {
+  font-size: 16px;
+  display: block;
+}
+.auth,
+.pgroup {
+  font-size: 14px;
+  padding: 5px;
+  background-color: rgba(127, 255, 212, 0.322);
+  display: block;
+}
+.pdate {
+  display: block;
+  margin: 6px;
+  font-size: 14px;
+}
+.contentdisplay {
+  width: 90%;
+  display: block;
+  height: 80vh;
+  overflow: scroll;
+  background-color: rgba(0, 0, 0, 0.24);
+  box-shadow: 12px 12px 13px black;
+  margin: auto;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 12px;
+}
+.closepostdis,
+.authdis,
+.datedis,
+.groupdis,
+.deletepost {
+  margin-left: 50px;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 12px;
+  background-color: cadetblue;
+  box-shadow: 12px 12px 3px black;
+}
+.deletepost {
+  background-color: orangered;
+}
+.dpost {
+  height: 100vh;
+  width: 100vw;
+}
+form {
+  display: inline-block;
+}
