@@ -484,7 +484,7 @@ background-color: orangered;
   background-color: rgb(50, 184, 23);
 }
 .join:hover {
-  background-color: greenyellow;
+  background-color: rgb(43, 71, 0);
   display: inline-block;
 }
 .joined {

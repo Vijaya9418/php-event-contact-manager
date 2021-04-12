@@ -13,7 +13,7 @@ $errorgpn = "";
 
 
     </form>
-    <button class="gcclose" onclick="closegadd()">cancle</button>
+    <button class="gcclose" onclick="closegadd()">cancel</button>
 </div>
 <script>
     function closegadd() {
