@@ -1,6 +1,5 @@
 <?php
 include('../nav/nav.php') ?>
-<h1>Events here</h1>
 
 <?php
 include('../manage/fetchdata.php') ?>
@@ -10,8 +9,8 @@ include('../manage/eventfetch.php') ?>
     <?php include('../index.css') ?><?php include('../post.css') ?>
 </style>
 
-
-<span class="events">New Events
+<div class="back">
+<span class="eventss"><h2>New Events</h2>
     <span class="gpcard">
         <?php
         $conn = new mysqli($servername, $usernamea, $password, "logindata");
@@ -92,12 +91,17 @@ include('../manage/eventfetch.php') ?>
                             </div>
                             </div>
                             
+                            
                             <span class='edec'> Details :" . $eventd[$iv] . "</span>
                             <span class='eorg'> Organised By :" . $evento[$iv] . "</span>
                             </span>";
             }
         }
+    
 
         ?>
+   
+
     </span>
 </span>
+</div>

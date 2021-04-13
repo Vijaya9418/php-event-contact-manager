@@ -33,7 +33,7 @@ include('./posts/postsfetch.php') ?>
         <button class="mybtn3" onclick="post()">Post a message</button>
 
         <span class="indcard">
-            <span class="events">New Events
+            <span class="events"><h2>New Events</h2>
                 <span class="gpcard">
                     <?php
                     $conn = new mysqli($servername, $usernamea, $password, "logindata");
@@ -141,7 +141,7 @@ include('./posts/postsfetch.php') ?>
             </span>
 
 
-            <span class="Groups">Groups
+            <span class="Groups"><h2>Groups</h2>
                 <span class="gpcard">
                     <?php
                     if (count($groups) == 0) {
@@ -180,7 +180,7 @@ include('./posts/postsfetch.php') ?>
                 </span>
             </span>
         </span>
-        <span class="posts">Posts here
+        <span class="posts"><h2>Posts here<h2>
             <div>
                 <?php
                 for ($iv = 0; $iv < count($pdtitle); $iv++) {

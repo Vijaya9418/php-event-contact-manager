@@ -17,3 +17,29 @@
   float: right;
   box-shadow: 2px 2px 2px black;
 }
+
+.back {
+  background-image: url("../images/back1.jpg");
+  background-repeat: no-repeat;
+
+  background-attachment: fixed;
+
+  background-size: cover;
+  padding-top: 2%;
+  background-position: center;
+  display: block;
+  height: 100vh;
+  width: 100vw;
+}
+.addmem
+{
+ margin-left: 20%;
+ margin-top: 0px;
+ margin-bottom: 10px;
+}
+.memdis,
+.grole
+{
+  margin-left: 20%;
+ 
+}
