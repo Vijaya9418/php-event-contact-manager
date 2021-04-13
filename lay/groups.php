@@ -1,9 +1,11 @@
 <?php
+include("../database/creditionala.php");
 include('../nav/nav.php') ?>
 <?php
 include('../manage/fetchdata.php') ?>
 <?php
 include('../manage/eventfetch.php') ?>
+z
 <style>
     <?php include('../index.css') ?><?php include('../post.css') ?>
 </style>
@@ -11,10 +13,8 @@ include('../manage/eventfetch.php') ?>
 
 <?php
 
-$servername = "localhost";
-$usernamea = "root";
-$password = "";
-$conn = new mysqli($servername, $usernamea, $password, "logindata");
+include('../database/creditionala.php');
+$conn = new mysqli($servername, $usernamea, $password, $databasename);
 
 if (isset($_POST['joininvite'])) {
     $usname = $_COOKIE['username'];
@@ -68,13 +68,11 @@ WHERE username='$usname'  and groupname='$gname' ";
 
     $check = false;
 
-    $servername = "localhost";
-    $usernamea = "root";
-    $password = "";
+    include('../database/creditionala.php');
     $errorgpn = "";
 
 
-    $conn = new mysqli($servername, $usernamea, $password, "logindata");
+    $conn = new mysqli($servername, $usernamea, $password, $databasename);
     if ($conn->connect_error) {
         echo "Failed to connect!";
         die("Connection failed: " . $conn->connect_error);
@@ -102,36 +100,47 @@ WHERE username='$usname'  and groupname='$gname' ";
         echo "<h2>Login First!</h2>";
     }
     ?>
-<div class="back">
-    <span class="Groupss"><h2>Groups</h2>
-        <span class="gpcard">
-            <?php
-            if (count($groups) == 0) {
-                echo "Create a group or join a group";
-            } else {
-                for ($iv = 0; $iv < count($groups); $iv++) {
-                    echo "<div class='gpcar'>
+    <div class="back">
+        <span class="Groupss">
+            <h2>Groups</h2>
+            <span class="gpcard">
+                <?php
+                if (count($groups) == 0) {
+                    echo "Create a group or join a group";
+                } else {
+                    for ($iv = 0; $iv < count($groups); $iv++) {
+                        echo "<div class='gpcar'>
 
-                            <img src='https://firebasestorage.googleapis.com/v0/b/reactelectronlearn.appspot.com/o/images%2F008ff400-bcde-428e-9364-1b80e4e34034.jpeg?alt=media&token=c6c01c82-40a2-40eb-8b7c-89175653c62d'>
-                            <div class='gimgside'>
+                    ";
+                        if (isset($imgg[$groups[$iv]])) {
+                            echo "
+                        <img src='../upload/" . $imgg[$groups[$iv]] . "'>
+                        ";
+                        } else
+                            echo "
+                    <img src='https://firebasestorage.googleapis.com/v0/b/reactelectronlearn.appspot.com/o/images%2F008ff400-bcde-428e-9364-1b80e4e34034.jpeg?alt=media&token=c6c01c82-40a2-40eb-8b7c-89175653c62d'>
+                    ";
+                        echo "
+                    <div class='gimgside'>
                                 <div class='grole'>" . $groupsrole[$iv] . "</div>
-                                <div class='memdis'><img src='./images/members.png'>" . $gnocount[$groups[$iv]] . "</div>
+                                <div class='memdis'><img src='../images/members.png'>" . $gnocount[$groups[$iv]] . "</div>
                             <form method='post'>  
 
                             <input hidden name='groupnamei' value='" . $groups[$iv] . "' >
-                              <button type='submit' id='" . $groups[$iv] . "'   name='addmembers' class='addmem' ><img src='./images/addmem.png'></button>
+                              <button type='submit' id='" . $groups[$iv] . "'   name='addmembers' class='addmem' >
+                              <img src='../images/addmem.png'></button>
                               </form>
                             </div>
                             <span class='gpname'>" . $groups[$iv] . "</span></div>";
+                    }
                 }
-            }
-            ?>
-           
+                ?>
+
+            </span>
+
         </span>
-  
-    </span>
     </div>
-    
+
 </body>
 
 </html>

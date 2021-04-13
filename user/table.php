@@ -1,7 +1,5 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
+include('../database/creditionala.php');
 $new = new mysqli($servername, $username, $password);
 if ($new->connect_error) {
     echo "Failed to connect!";
@@ -14,7 +12,7 @@ if ($new->connect_error) {
 
 
         // Create connection
-        $conn = new mysqli($servername, $username, $password, "logindata");
+        $conn = new mysqli($servername, $username, $password, $databasename);
         if ($conn->connect_error) {
             echo "Failed to connect!";
             die("Connection failed: " . $conn->connect_error);

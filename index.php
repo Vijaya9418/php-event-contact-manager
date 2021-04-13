@@ -1,4 +1,5 @@
 <?php
+include('./database/creditionala.php');
 include('./nav/nav.php') ?>
 <?php
 include('./manage/fetchdata.php') ?>
@@ -26,7 +27,7 @@ include('./posts/postsfetch.php') ?>
 
 <body>
     <div class="op" id="main">
-      
+
 
         <button class="mybtn1" onclick="cgop()">Create a group</button>
         <button class="mybtn2" onclick="ceop()">Add a Event</button>
@@ -36,7 +37,7 @@ include('./posts/postsfetch.php') ?>
             <span class="events"><h2>New Events</h2>
                 <span class="gpcard">
                     <?php
-                    $conn = new mysqli($servername, $usernamea, $password, "logindata");
+                    $conn = new mysqli($servername, $usernamea, $password, $databasename);
                     if (count($groups) == 0) {
                         echo "No events yet";
                     } else {

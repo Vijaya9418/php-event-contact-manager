@@ -1,7 +1,5 @@
+
 <?php
-$servername = "localhost";
-$usernamea = "root";
-$password = "";
 $groups = array();
 $groupsrole = array();
 $users = array();
@@ -11,7 +9,7 @@ if (empty($_COOKIE['username'])) {
     $errorgpn = "Login first!";
 } else {
     $username = $_COOKIE['username'];
-    $conn = new mysqli($servername, $usernamea, $password, "logindata");
+    $conn = new mysqli($servername, $usernamea, $password, $databasename);
     $sql = "SELECT * from groupdata";
 
     $result = $conn->query($sql);

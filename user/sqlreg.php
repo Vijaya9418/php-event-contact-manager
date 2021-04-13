@@ -61,12 +61,10 @@ if (isset($_POST['register'])) {
     }
     if ($noerror) {
         $check = true;
-        $servername = "localhost";
-        $usernamea = "root";
-        $passworda = "";
+        include('../database/creditionala.php');
 
         // Create connection
-        $conn = new mysqli($servername, $usernamea, $passworda, "logindata");
+        $conn = new mysqli($servername, $usernamea, $passworda, $databasename);
         if ($conn->connect_error) {
             echo "Failed to connect!";
             die("Connection failed: " . $conn->connect_error);
@@ -122,12 +120,10 @@ if (isset($_POST['register'])) {
  */
 function register()
 {
-    $servername = "localhost";
-    $usernamea = "root";
-    $password = "";
+    include("../database/creditionala.php");
 
     // Create connection
-    $conn = new mysqli($servername, $usernamea, $password, "logindata");
+    $conn = new mysqli($servername, $usernamea, $password, $databasename);
 
     // Check connection
     if ($conn->connect_error) {
