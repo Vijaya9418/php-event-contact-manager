@@ -2,9 +2,6 @@
 
 $check = false;
 
-$servername = "localhost";
-$usernamea = "root";
-$password = "";
 $errorgpn = "";
 if (empty($_COOKIE['username'])) {
     $errorgpn = "Login first!";
@@ -17,7 +14,7 @@ else {
             $errorgpn = "Name should be provided!";
         } else {
             $gpname = $_POST['groupn'];
-            $conn = new mysqli($servername, $usernamea, $password, "logindata");
+            $conn = new mysqli($servername, $usernamea, $password, $databasename);
             if ($conn->connect_error) {
                 echo "Failed to connect!";
                 die("Connection failed: " . $conn->connect_error);
@@ -84,7 +81,7 @@ else {
     }
     if (isset($_POST['imguploadf'])) {
         echo "<h1>I am working</h1>";
-        $conn = new mysqli($servername, $usernamea, $password, "logindata");
+        $conn = new mysqli($servername, $usernamea, $password, $databasename);
         if ($conn->connect_error) {
             echo "Failed to connect!";
             die("Connection failed: " . $conn->connect_error);

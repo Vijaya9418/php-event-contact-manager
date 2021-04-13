@@ -42,11 +42,9 @@ if (isset($_POST['login'])) {
         //     $usernames = $snapshot->data();
         $check = false;
 
-        $servername = "localhost";
-        $usernamea = "root";
-        $password = "";
+        include('../database/creditionala.php');
         // Create connection
-        $conn = new mysqli($servername, $usernamea, $password, "logindata");
+        $conn = new mysqli($servername, $usernamea, $password, $databasename);
         if ($conn->connect_error) {
             echo "Failed to connect!";
             die("Connection failed: " . $conn->connect_error);

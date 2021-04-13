@@ -1,10 +1,6 @@
 <?php
 
 $check = false;
-
-$servername = "localhost";
-$usernamea = "root";
-$password = "";
 $errorevn = "";
 $errordec = "";
 $errordate = "";
@@ -25,7 +21,7 @@ else {
             $eventname = $_POST['eventn'];
             $eventdec = $_POST['eventdec'];
             $eventdate = $_POST['eventdate'];
-            $conn = new mysqli($servername, $usernamea, $password, "logindata");
+            $conn = new mysqli($servername, $usernamea, $password, $databasename);
             if ($conn->connect_error) {
                 echo "Failed to connect!";
                 die("Connection failed: " . $conn->connect_error);
@@ -103,7 +99,7 @@ else {
     }
     if (isset($_POST['imguploadeventf'])) {
         echo "<h1>I am working</h1>";
-        $conn = new mysqli($servername, $usernamea, $password, "logindata");
+        $conn = new mysqli($servername, $usernamea, $password, $databasename);
         if ($conn->connect_error) {
             echo "Failed to connect!";
             die("Connection failed: " . $conn->connect_error);

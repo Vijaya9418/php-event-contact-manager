@@ -1,9 +1,11 @@
 <?php
+include("../database/creditionala.php");
 include('../nav/nav.php') ?>
 <?php
 include('../manage/fetchdata.php') ?>
 <?php
 include('../manage/eventfetch.php') ?>
+z
 <style>
     <?php include('../index.css') ?><?php include('../post.css') ?>
 </style>
@@ -11,10 +13,8 @@ include('../manage/eventfetch.php') ?>
 
 <?php
 
-$servername = "localhost";
-$usernamea = "root";
-$password = "";
-$conn = new mysqli($servername, $usernamea, $password, "logindata");
+include('../database/creditionala.php');
+$conn = new mysqli($servername, $usernamea, $password, $databasename);
 
 if (isset($_POST['joininvite'])) {
     $usname = $_COOKIE['username'];
@@ -68,13 +68,11 @@ WHERE username='$usname'  and groupname='$gname' ";
 
     $check = false;
 
-    $servername = "localhost";
-    $usernamea = "root";
-    $password = "";
+    include('../database/creditionala.php');
     $errorgpn = "";
 
 
-    $conn = new mysqli($servername, $usernamea, $password, "logindata");
+    $conn = new mysqli($servername, $usernamea, $password, $databasename);
     if ($conn->connect_error) {
         echo "Failed to connect!";
         die("Connection failed: " . $conn->connect_error);

@@ -1,7 +1,4 @@
 <?php
-$servername = "localhost";
-$usernamea = "root";
-$password = "";
 $eventn = array();
 $eventd = array();
 $eventt = array();
@@ -12,7 +9,7 @@ if (empty($_COOKIE['username'])) {
     $errorgpn = "Login first!";
 } else {
     $username = $_COOKIE['username'];
-    $conn = new mysqli($servername, $usernamea, $password, "logindata");
+    $conn = new mysqli($servername, $usernamea, $password, $databasename);
     $sql = "SELECT * from eventdata";
 
     $result = $conn->query($sql);

@@ -1,9 +1,6 @@
 <?php
-$servername = "localhost";
-$usernamea = "root";
-$password = "";
 
-$conn = new mysqli($servername, $usernamea, $password, "logindata");
+$conn = new mysqli($servername, $usernamea, $password, $databasename);
 if ($conn->connect_error) {
     echo "Failed to connect!";
     die("Connection failed: " . $conn->connect_error);

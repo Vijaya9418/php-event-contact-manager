@@ -1,4 +1,5 @@
 <?php
+include("../database/creditionala.php");
 include('../nav/nav.php') ?>
 <h1>Events here</h1>
 
@@ -14,7 +15,8 @@ include('../manage/eventfetch.php') ?>
 <span class="events">New Events
     <span class="gpcard">
         <?php
-        $conn = new mysqli($servername, $usernamea, $password, "logindata");
+        include('../database/creditionala.php');
+        $conn = new mysqli($servername, $usernamea, $password, $databasename);
         if (count($groups) == 0) {
             echo "No events yet";
         } else {
