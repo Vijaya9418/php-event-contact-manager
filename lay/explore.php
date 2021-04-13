@@ -1,11 +1,15 @@
 <?php
 include('../nav/nav.php') ?>
-<h1>Explore here</h1>
+
+<div class="back">
+<div class="imageup">
 
 <?php
 $target_dir = "../upload/";
 
+
 // Check if image file is a actual image or fake image
+
 
 if (isset($_POST["submitimg"])) {
 
@@ -58,6 +62,7 @@ if (isset($_POST["submitimg"])) {
     }
 }
 ?>
+</div>
 <form method="post" enctype="multipart/form-data">
     Select image to upload:
     <input type="file" name="fileToUpload" id="fileToUpload">
@@ -70,7 +75,8 @@ include('../manage/fetchdata.php') ?>
 <style>
     <?php include('../index.css') ?><?php include('../post.css') ?>
 </style>
-<span class="posts">Posts here
+
+<span class="posts"><h4>Posts here</h4>
     <div>
         <?php
         for ($iv = 0; $iv < count($pdtitle); $iv++) {
@@ -91,6 +97,9 @@ include('../manage/fetchdata.php') ?>
                 ";
             }
         }
-        ?></div>
+        ?>
+        
+    </div>
 
 </span>
+</div>

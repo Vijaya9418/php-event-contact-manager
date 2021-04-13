@@ -174,7 +174,7 @@ else {
         </div>
         <button class="cgcbtn" type="submit" name="createevent">Create Event</button>
     </form>
-    <button class="gcclose" onclick="closede()">cancle</button>
+    <button class="gcclose" onclick="closede()">cancel</button>
 </div>
 <script>
     //  console.log("fine");

@@ -9,7 +9,7 @@ z
 <style>
     <?php include('../index.css') ?><?php include('../post.css') ?>
 </style>
-<h1>Group Invites</h1>
+
 
 <?php
 
@@ -100,8 +100,8 @@ WHERE username='$usname'  and groupname='$gname' ";
         echo "<h2>Login First!</h2>";
     }
     ?>
-
-    <span class="Groups">Groups
+<div class="back">
+    <span class="Groupss"><h2>Groups</h2>
         <span class="gpcard">
             <?php
             if (count($groups) == 0) {
@@ -124,8 +124,12 @@ WHERE username='$usname'  and groupname='$gname' ";
                 }
             }
             ?>
+           
         </span>
+  
     </span>
+    </div>
+    
 </body>
 
 </html>
